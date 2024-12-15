@@ -1008,6 +1008,7 @@ Zone* ZonedBlockDevice::AllocateZone(Env::WriteLifeTimeHint file_lifetime,
         if (!z->open_for_write_) {
           allocated_zone = z;
           alloc_inval_data = inval_data;
+          break;
           }
           
           }
@@ -1245,6 +1246,7 @@ Zone* ZonedBlockDevice::AllocateZone(Env::WriteLifeTimeHint file_lifetime,
         if (!z->open_for_write_) {
           allocated_zone = z;
           alloc_inval_data = inval_data;
+          break;
         }
       }
     }
